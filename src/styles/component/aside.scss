@@ -1,0 +1,68 @@
+@import './../base/colours.scss';
+@import './../base/variables.scss';
+@import './../base/mixins.scss';
+
+.menu{
+    height: calc(100vh - 4rem);
+    margin-right: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: $aside-bg;
+    width: 25rem;
+
+    box-shadow: rgb(0 0 0 / 5%) 0rem 1.25rem 1.6875rem 0rem;
+    border: none;
+    transform: translateX(0);
+    // transform: translateX(-30rem);
+    transition: transform 200ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+
+    .menu__container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.menu--float {
+    transform: translateX(-30rem);
+//     display: block;
+//     top: 2rem;
+//     left: 0;
+//     // background-color: rgba($color: $neutral-1, $alpha: 1);
+//     width: 100%;
+//     padding: $padding-elemt 0;
+  
+//     @include tablet {
+//       width: auto;
+//       padding: 0;
+//     //   background-color: $header-bg;
+//     }
+}
+
+.menu__title{
+    margin-bottom: $margin_elemt;
+}
+
+.menu__list{
+    display: flex;
+    flex-direction: column;
+    .menu__item{
+        display: flex;
+        padding: calc($padding_elemt/2);
+        &:hover{
+            background-color: $menu-item-hover;
+            border-radius: 1rem;        
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+        a{
+            margin-right: $margin_elemt;
+        }
+    }
+}
+
+hr{
+    background-color: $line;
+}
+
+
